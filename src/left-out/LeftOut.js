@@ -37,7 +37,7 @@ export default class LeftOut extends Component {
         let arFirst = obj.areaFirst().toFixed(3);
         let arSecond = obj.areaSecond().toFixed(3);
         let arPZHZ = obj.areaPZHZ().toFixed(3);
-        let populPZHZ = obj.populationPZHZ();
+        let populPZHZ = obj.populationPZHZ().toFixed(3);
         let numAffected = obj.numberAffected().toFixed(0);
         let tranSpeed = obj.transferSpeed().toFixed(1);
         let duration = obj.duration().toFixed(2);
@@ -46,6 +46,10 @@ export default class LeftOut extends Component {
 
         let checkTypeOff = (param) => {
             return param != 'NaN' && !isNaN(param) ? param : '-';
+        }
+
+        let checkTypeO = (param) => {
+            return param != 'NaN' && !isNaN(param) ? param : '0.000';
         }
 
         return (
@@ -88,7 +92,7 @@ export default class LeftOut extends Component {
                         </tr>
                         <tr>
                             <th scope="row">Площа ПЗХЗ (км2)</th>
-                            <td>{checkTypeOff(arPZHZ)}</td>
+                            <td>{checkTypeO(arPZHZ)}</td>
                         </tr>
                         <tr >
                             <th className="ogl" scope="row">Результати розрахунку можливих втрат</th>

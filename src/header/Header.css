@@ -2,3 +2,10 @@
     font-weight: 900;
     margin-right: 50px !important;
 }
+
+.title {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 0;
+    color: rgba(37, 34, 34, 0.55);
+}

@@ -7,6 +7,10 @@ import LeftAdd from "./left-add/LeftAdd";
 import LeftOut from "./left-out/LeftOut";
 import RightAdd from "./right-add/RightAdd";
 import Footer from "./footer/Footer";
+import About from "./about/About.js";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+
 
 export default class App extends Component {
 
@@ -46,7 +50,10 @@ export default class App extends Component {
             <RightAdd calcFunctionSecond={calcFunctionSecond} />
           </Col>
           <Col xs={6}>
-            <MapCoordinate data={this.state} />
+            <Routes >
+              <Route exact path="/" element={<MapCoordinate data={this.state} />} />
+              <Route exact path="/about" element={<About />} />
+            </Routes >
           </Col>
           <Col xs={3}>
             <LeftOut data={this.state} />

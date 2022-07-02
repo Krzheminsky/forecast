@@ -311,7 +311,11 @@ export default class CalculationFirst extends Component {
     }
 
     areaPZHZ() {
+
         let result;
+        if (this.primaryDepth() == 0) {
+            result = 0;
+        }
         if (this.primaryDepth() > this.secondaryDepth()) {
             result = 3.1415 * ((Math.pow(this.radiusAccident(), 2) * (180 - this.angleF2()) / 180) +
                 (Math.pow((this.primaryDepth() + this.radiusAccident()), 2) * this.angleF1() / 180) +

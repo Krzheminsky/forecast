@@ -82,7 +82,7 @@ export default class RightAdd extends Component {
                             </tbody>
                         </table >
 
-                        <button type="submit" className="btn btn-outline-primary">Розрахувати</button>
+                        <button type="submit" className="btn btn-outline-primary btn-2">Розрахувати</button>
 
                     </div>
                 </form>
