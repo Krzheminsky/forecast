@@ -12,9 +12,9 @@ L.Icon.Default.imagePath = "https://unpkg.com/leaflet@1.5.0/dist/images/";
 export default class MapCoordinate extends Component {
 
     state = {
-        lat: 48,
-        lng: 31,
-        zoom: 7,
+        lat: 49.16,
+        lng: 34.41,
+        zoom: 6,
         radAvar: 0,
         radZMHZ: 0,
         secDepth: 1,
@@ -80,7 +80,7 @@ export default class MapCoordinate extends Component {
 
                 < Marker position={position} >
                     <Popup>{data.dataChimistry.chemical},{amount} т<br />
-                        Коордінати:<br /> {lat.toFixed(4)}, {lng.toFixed(4)}
+                        Координати:<br /> {lat.toFixed(4)}, {lng.toFixed(4)}
                     </Popup>
                 </Marker >
             )

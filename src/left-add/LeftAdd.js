@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import './LeftAdd.css';
 import { Container, Row, Col } from 'react-bootstrap';
 import Wind from "../wind/Wind";
-import { chemicalSubstances, phisicalState, verticalStability, probability } from '../database';
+import { chemicalSubstances, phisicalState, verticalStability, probability, nhr } from '../database';
 
 
 
@@ -27,7 +27,7 @@ export default class LeftAdd extends Component {
                 him = el;
             }
         })
-        let { boilingPoint, coecificHeat, density, densityGas, id, molWeight, toxiCosis, vaporisation } = him;
+        let { boilingPoint, coecificHeat, density, densityGas, id, molWeight, toxiCosis, vaporisation, nhr } = him;
 
         let vert = '';
         verticalStability.map((el) => {
@@ -52,6 +52,7 @@ export default class LeftAdd extends Component {
 
         let obj = {
             id,
+            nhr,
             density,
             chemical,
             molWeight,
@@ -140,7 +141,7 @@ export default class LeftAdd extends Component {
                                         <label className="form-label">Швидкість вітру (м/с)</label>
                                     </th>
                                     <td>
-                                        <input type="number" className="form-num" defaultValue={1} name="wind" />
+                                        <input type="number" className="form-num" defaultValue={1} name="wind" step="0.1" min="0.1" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -156,7 +157,7 @@ export default class LeftAdd extends Component {
                                         <label className="form-label">Кількість НХР в ємності (кг)</label>
                                     </th>
                                     <td>
-                                        <input type="number" className="form-num" defaultValue={1000} name="massa" />
+                                        <input type="number" className="form-num" defaultValue={1000} name="massa" min="0" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -164,7 +165,7 @@ export default class LeftAdd extends Component {
                                         <label className="form-label">Коефіцієнт впливу місцевості</label>
                                     </th>
                                     <td>
-                                        <input type="number" className="form-num" defaultValue={0.5} placeholder="0.5" name="koef" step="0.1" />
+                                        <input type="number" className="form-num" defaultValue={0.5} placeholder="0.5" name="koef" step="0.1" min="0.1" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -172,7 +173,7 @@ export default class LeftAdd extends Component {
                                         <label className="form-label">Висота піддону (м) </label>
                                     </th>
                                     <td>
-                                        <input type="number" className="form-num" step="0.1" placeholder="0 - якщо відсутній" name="visota" />
+                                        <input type="number" className="form-num" step="0.1" placeholder="0 - якщо відсутній" name="visota" min="0" />
                                     </td>
                                 </tr>
                                 <tr>

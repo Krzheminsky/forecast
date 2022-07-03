@@ -1,6 +1,6 @@
 .navbar-brand {
     font-weight: 900;
-    margin-right: 50px !important;
+
 }
 
 .title {
@@ -8,4 +8,16 @@
     font-weight: 500;
     margin-bottom: 0;
     color: rgba(37, 34, 34, 0.55);
+}
+
+.header li {
+    font-weight: 700;
+    font-size: 14px;
+
+}
+
+@media (max-width: 420px) {
+    .navbar-brand h1 {
+        display: none;
+    }
 }

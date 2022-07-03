@@ -42,7 +42,7 @@ export default class RightAdd extends Component {
                                         <label className="form-label">Час, з моменту аварії (хвилин)</label>
                                     </th>
                                     <td>
-                                        <input type="number" className="form-num" defaultValue={240} id="exampleInput1" name="time" placeholder="240" />
+                                        <input type="number" className="form-num" defaultValue={240} id="exampleInput1" name="time" placeholder="240" min="0" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -50,7 +50,7 @@ export default class RightAdd extends Component {
                                         <label className="form-label">Відстань від джерела до об'єкта (км)</label>
                                     </th>
                                     <td>
-                                        <input type="number" className="form-num" name="distance" id="exampleInput2" defaultValue={1} placeholder="0" step="0.1" />
+                                        <input type="number" className="form-num" name="distance" id="exampleInput2" defaultValue={1} placeholder="0" step="0.1" min="0" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -58,7 +58,7 @@ export default class RightAdd extends Component {
                                         <label className="form-label">Щильність населення (осіб/кв.км)</label>
                                     </th>
                                     <td>
-                                        <input type="number" className="form-num" name="density" id="exampleInput3" placeholder="0" />
+                                        <input type="number" className="form-num" name="density" id="exampleInput3" placeholder="0" min="0" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -66,7 +66,7 @@ export default class RightAdd extends Component {
                                         <label className="form-label">Коефіціент захищеності</label>
                                     </th>
                                     <td>
-                                        <input type="number" className="form-num" name="protection" id="exampleInput4" defaultValue={0.72} placeholder="0.72" step="0.01" />
+                                        <input type="number" className="form-num" name="protection" id="exampleInput4" defaultValue={0.72} placeholder="0.72" step="0.01" min="0.01" />
                                     </td>
                                 </tr>
                                 <tr>
@@ -74,7 +74,7 @@ export default class RightAdd extends Component {
                                         <label className="form-label">Площа ураженої території (кв.км)</label>
                                     </th>
                                     <td>
-                                        <input type="number" name="area" className="form-num" id="exampleInput5" placeholder="0" step="0.1" />
+                                        <input type="number" name="area" className="form-num" id="exampleInput5" placeholder="0" step="0.1" min="0" />
                                     </td>
                                 </tr>
 

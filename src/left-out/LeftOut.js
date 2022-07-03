@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import './LeftOut.css';
+import stup from "./stup.png";
 import { Container, Row, Col } from 'react-bootstrap';
 import Calculation from '../calculation/Calculation'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -124,9 +125,9 @@ export default class LeftOut extends Component {
                         </tr>
                     </tbody>
                 </table >
-                <ul>
+                <ul className="promijni-ul">
                     <li className="nav-item dropdown">
-                        <p data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Проміжні розрахунки</p>
+                        <p className="promijni-p" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Проміжні розрахунки</p>
                         <div className="dropdown-menu">
                             <table className="table table-hover">
                                 <tbody >
@@ -185,6 +186,24 @@ export default class LeftOut extends Component {
 
                                 </tbody>
                             </table>
+
+                        </div>
+                    </li>
+                </ul>
+                <ul className="promijni-ul">
+                    <li className="nav-item dropdown">
+                        <p className="promijni-ul" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Довідкова інформація про НХР</p>
+                        <div className="dropdown-menu">
+                            <p className="nhr" >{this.props.data.dataChimistry.nhr}</p>
+
+                        </div>
+                    </li>
+                </ul>
+                <ul className="promijni-ul">
+                    <li className="nav-item dropdown">
+                        <p className="promijni-ul" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ступені вертикальної стійкості повітря</p>
+                        <div className="dropdown-menu">
+                            <img className="imgChim" src={stup} alt="Таблиця стану НХР" width="100%" />
 
                         </div>
                     </li>

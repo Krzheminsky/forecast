@@ -10,14 +10,14 @@ const Wind = (props) => {
                 label=""
                 min={1}
                 max={360}
-                width={40}
+                width={50}
                 direction={1}
                 knobSize={10}
                 trackSize={4}
                 dataIndex={360}
                 progressSize={4}
                 knobPosition="top"
-                knobColor="grey"
+                knobColor="tomato"
                 appendToValue="°"
                 valueFontSize="12px"
                 labelFontSize='10px'

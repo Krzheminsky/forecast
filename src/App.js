@@ -8,8 +8,10 @@ import LeftOut from "./left-out/LeftOut";
 import RightAdd from "./right-add/RightAdd";
 import Footer from "./footer/Footer";
 import About from "./about/About.js";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HowToWork from "./howToWork/HowToWork";
+import TableChim from "./table/TableChim"
 
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 
 export default class App extends Component {
@@ -21,7 +23,6 @@ export default class App extends Component {
   }
 
   render() {
-
     let calcFunction = (dataChimistry) => {
       this.setState({ dataChimistry })
     }
@@ -43,19 +44,21 @@ export default class App extends Component {
           </Col>
         </Row>
         <Row>
-          <Col xs={3}>
+          <Col md={3}>
             <LeftAdd
               calcFunction={calcFunction}
               calcWind={calcWind} />
             <RightAdd calcFunctionSecond={calcFunctionSecond} />
           </Col>
-          <Col xs={6}>
+          <Col md={6}>
             <Routes >
               <Route exact path="/" element={<MapCoordinate data={this.state} />} />
               <Route exact path="/about" element={<About />} />
+              <Route exact path="/how" element={<HowToWork />} />
+              <Route exact path="/table" element={<TableChim />} />
             </Routes >
           </Col>
-          <Col xs={3}>
+          <Col md={3}>
             <LeftOut data={this.state} />
           </Col>
         </Row>
