@@ -1,11 +1,9 @@
 .left-add {
     padding: 0;
-    /* height: 300px; */
-    /*border: 2px solid #ced4da;*/
+    margin-top: 10px;
 }
 
 form {
-    /* border: 1px solid red; */
     margin-top: 0 !important;
 }
 

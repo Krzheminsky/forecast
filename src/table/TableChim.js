@@ -10,7 +10,7 @@ export default class TableChim extends Component {
             <div className="table">
 
                 <h2>Фізико-хімічні властивості деяких НХР</h2>
-                <img className="imgChim" src={tab} alt="Таблиця стану НХР" width="100%" />
+                <img className="imgChim" src={tab} alt="Таблиця стану НХР" width="99%" />
 
 
             </div >

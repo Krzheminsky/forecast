@@ -1,11 +1,11 @@
 .breadcrumb {
+    margin-top: 10px;
     font-size: 12px;
-    justify-content: center;
+    justify-content: left;
 }
 
 .footer {
     font-size: 12px;
-    margin-left: 130px;
 }
 
 a.footer:active,

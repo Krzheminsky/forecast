@@ -10,9 +10,7 @@ import Footer from "./footer/Footer";
 import About from "./about/About.js";
 import HowToWork from "./howToWork/HowToWork";
 import TableChim from "./table/TableChim"
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 
 export default class App extends Component {
 

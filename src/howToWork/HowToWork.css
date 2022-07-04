@@ -1,14 +1,68 @@
+.how {
+    width: 99%;
+    padding: 0 10px;
+}
+
 .about-h3 {
     margin: 15px;
     margin-left: 30px;
 }
 
-.about-span {
-    font-size: 20px;
-    font-weight: 600;
+.how p {
+    text-indent: 30px;
+    text-align: justify;
 }
 
-.right-out p {
-    text-indent: 30px;
-    text-align: justify
+.how p,
+.how li {
+    font-size: 14px;
+}
+
+
+@media (max-width: 420px) {
+
+    .how p,
+    .how li {
+        font-size: 10px;
+    }
+
+    .about-h3 {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .how p,
+    .how li {
+        font-size: 11px;
+    }
+
+    .about-h3 {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .how p,
+    .how li {
+        font-size: 12px;
+    }
+
+    .about-h3 {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1460px) {
+
+    .how p,
+    .how li {
+        font-size: 14px;
+    }
+
+    .about-h3 {
+        font-size: 16px;
+    }
 }
