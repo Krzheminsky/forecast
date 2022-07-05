@@ -146,7 +146,7 @@ export default class LeftAdd extends Component {
                                 </tr>
                                 <tr>
                                     <th scope="row">
-                                        <label className="form-label">Температура повітря (С)</label>
+                                        <label className="form-label">Температура повітря (С&#xb0;)</label>
                                     </th>
                                     <td>
                                         <input type="number" className="form-num" defaultValue={20} name="term" />

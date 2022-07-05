@@ -99,7 +99,7 @@ export default class MapCoordinate extends Component {
                 <Circle center={pos} pathOptions={{ color: "yellow" }} radius={radZMHZ != '-' ? radZMHZ * 1000 : 0} >
                     <Popup>
                         Зона можливого хімічного забруднення, <br />
-                        глибина ЗМХЗ: {radZMHZ} км,<br /> площа ЗМХЗ: {arZMHZ} кв.км
+                        глибина ЗМХЗ: {radZMHZ} км,<br /> площа ЗМХЗ: {arZMHZ} км<sup>2</sup>
                     </Popup>
                 </Circle>
 
@@ -111,13 +111,13 @@ export default class MapCoordinate extends Component {
 
                 <Polygon pathOptions={{ color: "green" }} positions={secondArea} >
                     <Popup>
-                        Вторинна хмара,<br /> глибина Г2: {secDepth.toFixed(3)} км,<br /> площа S2: {arSecond} кв.км
+                        Вторинна хмара,<br /> глибина Г2: {secDepth.toFixed(3)} км,<br /> площа S2: {arSecond} км<sup>2</sup>
                     </Popup>
                 </Polygon>
 
                 <Polygon pathOptions={{ color: "blue" }} positions={firstArea} >
                     <Popup>
-                        Первинна хмара,<br /> глибина Г1: {primDepth != '-' ? primDepth.toFixed(3) : 0}  км,<br /> площа S1: {arFirst} кв.км
+                        Первинна хмара,<br /> глибина Г1: {primDepth != '-' ? primDepth.toFixed(3) : 0}  км,<br /> площа S1: {arFirst} км<sup>2</sup>
                     </Popup>
                 </Polygon>
 

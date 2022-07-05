@@ -55,7 +55,7 @@ export default class RightAdd extends Component {
                                 </tr>
                                 <tr>
                                     <th scope="row">
-                                        <label className="form-label">Щильність населення (осіб/кв.км)</label>
+                                        <label className="form-label">Щильність населення (осіб/км<sup>2</sup>)</label>
                                     </th>
                                     <td>
                                         <input type="number" className="form-num" name="density" id="exampleInput3" placeholder="0" min="0" />
@@ -71,7 +71,7 @@ export default class RightAdd extends Component {
                                 </tr>
                                 <tr>
                                     <th scope="row">
-                                        <label className="form-label">Площа ураженої території (кв.км)</label>
+                                        <label className="form-label">Площа ураженої території (км<sup>2</sup>)</label>
                                     </th>
                                     <td>
                                         <input type="number" name="area" className="form-num" id="exampleInput5" placeholder="0" step="0.1" min="0" />
