@@ -4,6 +4,7 @@ import stup from "./stup.png";
 import { Container, Row, Col } from 'react-bootstrap';
 import Calculation from '../calculation/Calculation'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Accordion, Card } from "react-bootstrap";
 
 
 export default class LeftOut extends Component {
@@ -125,93 +126,105 @@ export default class LeftOut extends Component {
                         </tr>
                     </tbody>
                 </table >
-                <ul className="promijni-ul">
-                    <li className="nav-item dropdown">
-                        <p className="promijni-p" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Проміжні розрахунки</p>
-                        <div className="dropdown-menu">
-                            <table className="table table-hover">
-                                <tbody >
-                                    <tr>
-                                        <th scope="row">Розрахункова глибина первинної хмари</th>
-                                        <td>{checkTypeOff(pCloud)}</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Розрахункова глибина вторинної хмари</th>
-                                        <td>{checkTypeOff(sCloud)}</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">К-сть НХР, що перейшла у первинну хмару</th>
-                                        <td>{checkTypeOff(primCloud)}</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">К-сть НХР, що перейшла у вторинну хмару</th>
-                                        <td>{checkTypeOff(secCloud)}</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Привед. діам. площі виливу НХР</th>
-                                        <td>{checkTypeOff(diamArea)}</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Площа поверхні виливу НХР</th>
-                                        <td>{checkTypeOff(surArea)}</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Питома швидкість випаровування</th>
-                                        <td>{checkTypeOff(evaporRate)}</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Час випаровування</th>
-                                        <td>{checkTypeOff(evaporTime)}</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Коефіціент А</th>
-                                        <td>{checkTypeOff(koefA)}</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Коефіціент В1</th>
-                                        <td>{checkTypeOff(koefB1)}</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Коефіціент В2</th>
-                                        <td>{checkTypeOff(koefB2)}</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Половина кута Ф1</th>
-                                        <td>{anglF1}</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Половина кута Ф2</th>
-                                        <td>{anglF2}</td>
-                                    </tr>
 
-                                </tbody>
-                            </table>
+                <div className="accordion" id="accordionExample">
 
+                    <div className="accordion-item">
+                        <h2 className="accordion-header" id="headingOne">
+                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                Проміжні розрахунки
+                            </button>
+                        </h2>
+                        <div id="collapseOne" className="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div className="accordion-body">
+                                <table className="table table-hover">
+                                    <tbody >
+                                        <tr>
+                                            <th scope="row">Розрахункова глибина первинної хмари</th>
+                                            <td>{checkTypeOff(pCloud)}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Розрахункова глибина вторинної хмари</th>
+                                            <td>{checkTypeOff(sCloud)}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">К-сть НХР, що перейшла у первинну хмару</th>
+                                            <td>{checkTypeOff(primCloud)}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">К-сть НХР, що перейшла у вторинну хмару</th>
+                                            <td>{checkTypeOff(secCloud)}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Привед. діам. площі виливу НХР</th>
+                                            <td>{checkTypeOff(diamArea)}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Площа поверхні виливу НХР</th>
+                                            <td>{checkTypeOff(surArea)}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Питома швидкість випаровування</th>
+                                            <td>{checkTypeOff(evaporRate)}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Час випаровування</th>
+                                            <td>{checkTypeOff(evaporTime)}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Коефіціент А</th>
+                                            <td>{checkTypeOff(koefA)}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Коефіціент В1</th>
+                                            <td>{checkTypeOff(koefB1)}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Коефіціент В2</th>
+                                            <td>{checkTypeOff(koefB2)}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Половина кута Ф1</th>
+                                            <td>{anglF1}</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Половина кута Ф2</th>
+                                            <td>{anglF2}</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-                    </li>
-                </ul>
-                <ul className="promijni-ul">
-                    <li className="nav-item dropdown">
-                        <p className="promijni-ul" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Довідкова інформація про НХР</p>
-                        <div className="dropdown-menu">
-                            <p className="nhr" >{this.props.data.dataChimistry.nhr}</p>
+                    </div>
 
+                    <div className="accordion-item">
+                        <h2 className="accordion-header" id="headingTwo">
+                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Довідкова інформація про НХР
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div className="accordion-body">
+                                <p className="nhr" >{this.props.data.dataChimistry.nhr}</p>
+                            </div>
                         </div>
-                    </li>
-                </ul>
-                <ul className="promijni-ul">
-                    <li className="nav-item dropdown">
-                        <p className="promijni-ul" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ступені вертикальної стійкості повітря</p>
-                        <div className="dropdown-menu">
-                            <img className="imgChim" src={stup} alt="Таблиця стану НХР" width="100%" />
+                    </div>
 
+                    <div className="accordion-item">
+                        <h2 className="accordion-header" id="headingThree">
+                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Ступені вертикальної стійкості повітря
+                            </button>
+                        </h2>
+                        <div id="collapseThree" className="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div className="accordion-body">
+                                <img className="imgChim" src={stup} alt="Таблиця стану НХР" width="100%" />
+                            </div>
                         </div>
-                    </li>
-                </ul>
-
+                    </div>
+                </div>
             </div >
-
-
         );
     }
 }

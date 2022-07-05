@@ -33,3 +33,13 @@ td {
 .left-out {
     margin-top: 10px;
 }
+
+.accordion-button {
+    padding: 5px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.accordion {
+    margin-top: 10px;
+}
