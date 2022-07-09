@@ -41,6 +41,10 @@ export default class MapCoordinate extends Component {
         let arZMHZ = obj.areaZMHZ().toFixed(3);
         let arFirst = obj.areaFirst().toFixed(3);
         let arSecond = obj.areaSecond().toFixed(3);
+        let globalDepth = obj.globalDepth().toFixed(3);
+        console.log('globalDepth', globalDepth)
+        console.log('globDepth', globDepth)
+
 
         let angl = new Asimut({
             lat,
@@ -96,14 +100,14 @@ export default class MapCoordinate extends Component {
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 />
-                <Circle center={pos} pathOptions={{ color: "yellow" }} radius={radZMHZ != '-' ? radZMHZ * 1000 : 0} >
+                <Circle center={pos} pathOptions={{ color: "yellow" }} radius={globalDepth != '-' ? globalDepth * 1000 : 0} >
                     <Popup>
                         Зона можливого хімічного забруднення, <br />
-                        глибина ЗМХЗ: {radZMHZ} км,<br /> площа ЗМХЗ: {arZMHZ} км<sup>2</sup>
+                        глибина ЗМХЗ: {globalDepth} км,<br /> площа ЗМХЗ: {arZMHZ} км<sup>2</sup>
                     </Popup>
                 </Circle>
 
-                <Circle center={pos} pathOptions={{ color: "red" }} radius={radAvar != '-' ? radAvar * 1000 : 0} >
+                <Circle center={pos} pathOptions={{ color: "red" }} radius={radAsid != '-' ? radAsid * 1000 : 0} >
                     <Popup>
                         Радіус аварії {radAsid} км
                     </Popup>
