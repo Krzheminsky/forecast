@@ -6,7 +6,6 @@ import "./MapCoordinate.css";
 import map from 'leaflet';
 import L from 'leaflet';
 
-
 L.Icon.Default.imagePath = "https://unpkg.com/leaflet@1.5.0/dist/images/";
 
 export default class MapCoordinate extends Component {
@@ -42,9 +41,6 @@ export default class MapCoordinate extends Component {
         let arFirst = obj.areaFirst().toFixed(3);
         let arSecond = obj.areaSecond().toFixed(3);
         let globalDepth = obj.globalDepth().toFixed(3);
-        console.log('globalDepth', globalDepth)
-        console.log('globDepth', globDepth)
-
 
         let angl = new Asimut({
             lat,
@@ -56,7 +52,6 @@ export default class MapCoordinate extends Component {
             globDepth,
             primDepth,
             ...data
-
         })
 
         let cloudOne = angl.cloudOne();
